@@ -891,6 +891,7 @@ const Home = () => {
               mr: 3,
               mb: 4,
               mt: 2,
+              width: "20%",
               borderRadius: "0.5rem",
               // Potrait phones and smaller
               "@media (max-width: 468px)": {
