@@ -318,3 +318,69 @@
     </Stack>
   </Grid>
 </Grid>;
+
+<Paper
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "25%",
+    minHeight: "100px",
+    mr: 5,
+    my: 10,
+    px: 1,
+    "@media screen and (max-width:992px)": {
+      width: "80%",
+      mx: 2,
+      my: 2,
+    },
+  }}
+>
+  <Avatar
+    sx={{
+      width: 70,
+      height: 70,
+      backgroundColor: "white",
+    }}
+    variant="square"
+    className="icon"
+  >
+    <DesignServicesIcon
+      sx={{
+        width: 35,
+        height: 35,
+        color: "#000",
+      }}
+    />
+  </Avatar>
+  <Typography
+    variant="h4"
+    sx={{
+      textTransform: "capitalize",
+      fontSize: "1.4rem",
+      fontWeight: "bold",
+      fontFamily: "Roboto, sans-serif",
+      my: 2,
+      px: 1,
+    }}
+  >
+    Front End Web Design
+  </Typography>
+  <Typography
+    variant="body1"
+    sx={{
+      fontSize: "0.9rem",
+      fontFamily: "Roboto, sans-serif",
+      textAlign: "justify",
+      px: 1,
+      py: 1,
+    }}
+  >
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quod nemo
+    excepturi amet debitis, libero iure voluptatibus blanditiis non
+    exercitationem ipsum corrupti inventore, dolores incidunt harum ea vero
+    nobis minus quia nam placeat. Ex quas ea praesentium ipsum, error soluta
+    vero corrupti eveniet, esse, dolorum numquam sint autem culpa cupiditate.
+  </Typography>
+</Paper>;

@@ -280,6 +280,13 @@ div.btn {
   justify-content: space-between;
 }
 
+/* Services */
+
+.underlineService {
+  border: 3px ridge #e9b949;
+  margin-top: 3px;
+}
+
 /* Media Queries */
 @media screen and (max-width: 895px) {
   .navLinks {

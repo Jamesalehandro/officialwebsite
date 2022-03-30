@@ -90,9 +90,8 @@ const Home = () => {
                 lineHeight: 1.25,
                 marginBottom: "0.75rem",
                 mt: 4,
-                pb: 1,
+                pb: 3,
                 letterSpacing: "0.15rem",
-                textDecoration: "underline #E9B949",
                 fontFamily: "Roboto, sans-serif",
                 "@media screen and (min-width:895px)": {
                   lineHeight: 1,
@@ -102,8 +101,8 @@ const Home = () => {
               }}
             >
               I am James
+              <div className="underlineService"></div>
             </Typography>
-
             <Typography
               variant="h4"
               sx={{
@@ -119,7 +118,6 @@ const Home = () => {
             >
               Front End Developer with React
             </Typography>
-
             <div className="sectionOneBtn">
               <button className="introBtn">
                 <Link to={"/contact"}>Hire Me </Link>
@@ -259,7 +257,7 @@ const Home = () => {
                 mb: 2,
                 transition: "all 1s ease-in",
                 ":hover": {
-                  transform: "rotateY(180deg)",
+                  transform: "rotateY(360deg)",
                 },
                 "@media screen and (max-width:460px)": {
                   width: 250,
@@ -354,11 +352,11 @@ const Home = () => {
             sx={{
               fontWeight: 600,
               fontFamily: "Roboto, sans-serif",
-              textDecoration: "underline 5px solid blue",
               mt: 5,
             }}
           >
             MY SERVICES
+            <div className="underlineService"></div>
           </Typography>
         </Grid>
 
@@ -374,6 +372,7 @@ const Home = () => {
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "#F1F5F8",
+            mb: 10,
           }}
         >
           <Paper
@@ -427,7 +426,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1.1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 px: 1,
@@ -488,7 +487,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1.1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 py: 1,
@@ -552,7 +551,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1.1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 py: 1,
