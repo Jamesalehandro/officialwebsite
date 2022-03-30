@@ -11,12 +11,14 @@ const Footer = () => {
     <Box
       component={"div"}
       sx={{
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         minHeight: "25vh",
         backgroundColor: "#FFFAEB",
+        // border: "2px solid black",
       }}
     >
       <Stack

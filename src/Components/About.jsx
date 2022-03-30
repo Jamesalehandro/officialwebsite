@@ -42,9 +42,10 @@ const About = () => {
           sx={{
             width: "50%",
             mt: 5,
+            mb: 3,
             fontSize: "1.1rem",
             fontFamily: "Roboto, sans-serif",
-            textAlign: "justify",
+            textAlign: "center",
             color: "gray",
           }}
         >

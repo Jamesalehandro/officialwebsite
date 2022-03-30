@@ -26,10 +26,10 @@ import ProjectJp2 from "../images/Snapchat-324694748.jpg";
 
 const Home = () => {
   return (
-    <Container
+    <Box
       maxWidth={"100%"}
-      disableGutters={true}
       component={"div"}
+      // sx={{ border: "2px solid red" }}
       className="homePage"
     >
       {/*Intro */}
@@ -52,7 +52,6 @@ const Home = () => {
           sx={{
             my: 25,
             mx: 10,
-            // border: "2px solid black",
             "@media screen and (min-width:768px)": {
               mx: 6,
               my: 1,
@@ -185,10 +184,16 @@ const Home = () => {
 
         {/* Section one Img */}
         <Grid>
-          <Box sx={{ mt: 2, position: "relative", mb: 7 }}>
+          <Box
+            sx={{
+              mt: 2,
+              position: "relative",
+              mb: 7,
+            }}
+          >
             <div className="backOfImage">
               <Avatar
-                src="../IMG_20191113_200513_566-1.jpg"
+                src={James}
                 variant="square"
                 sx={{
                   borderRadius: "0.4rem",
@@ -213,11 +218,13 @@ const Home = () => {
           // pl: 0,
           pr: 3,
           mt: 0.1,
+          mb: 2,
           backgroundColor: "white",
+          // border: "2px solid coral",
+          width: "100%",
         }}
         direction={"row"}
         alignItems={"center"}
-        spacing={4}
       >
         {/* About me Image */}
         <Grid
@@ -242,7 +249,7 @@ const Home = () => {
         >
           <div className="aboutBackImage">
             <Avatar
-              src={James}
+              src={ProjectJp2}
               alt="Chigbo James"
               variant="square"
               sx={{
@@ -327,11 +334,11 @@ const Home = () => {
       {/* My services */}
       <Grid
         container
-        spacing={2}
         sx={{
           justifyContent: "center",
           backgroundColor: "#F1F5F8",
           minHeight: "700px",
+          // border: "2px solid black",
         }}
       >
         <Grid
@@ -567,13 +574,14 @@ const Home = () => {
       <Box
         className="connect"
         sx={{
-          width: "100%",
+          width: "99.9%",
           minHeight: "40vh",
           display: "flex",
           placeItems: "center",
           position: "relative",
           margin: " 5rem 0",
           padding: "10rem 0 5rem 0",
+          // border: "2px solid black",
           "::after": {
             content: "''",
             position: "absolute",
@@ -588,8 +596,6 @@ const Home = () => {
         }}
       >
         <video
-          width="320"
-          height="240"
           controls
           autoPlay
           muted
@@ -662,8 +668,8 @@ const Home = () => {
         sx={{
           backgroundColor: "#FCEEC5",
           textAlign: "center",
-          mt: 4,
-          p: "auto 0px",
+          mt: 7,
+          pt: 3,
         }}
         direction={"column"}
       >
@@ -674,7 +680,7 @@ const Home = () => {
             lineHeight: 1.25,
             marginBottom: "0.75rem",
             textTransform: "capitalize",
-            mt: 2,
+            mt: 4,
             fontWeight: " bold",
             pb: 1,
             letterSpacing: "0.15rem",
@@ -747,9 +753,10 @@ const Home = () => {
         direction={"column"}
         alignItems={"center"}
         sx={{
-          // border: "2px solid green",
-          minHeight: "50vh",
+          minHeight: "52vh",
           backgroundColor: "#F1F5F8",
+          width: "100%",
+          mb: -2.8,
         }}
       >
         <Typography
@@ -769,16 +776,14 @@ const Home = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "100%",
+            width: "99%",
             minHeight: "300px",
             mx: 2,
             mb: 5,
-            // Potrait phones and smaller
-            "@media (max-width: 468px)": {
-              flexDirection: "column",
-            },
+
             // Landscape phones and potrait tablets
             "@media  (max-width: 767px)": {
+              width: "96%",
               flexDirection: "column",
             },
             // Potrait tablets and small desktops
@@ -799,20 +804,17 @@ const Home = () => {
             sx={{
               position: "relative",
               minHeight: "27rem",
-              width: "20%",
+              width: "22%",
               backgroundColor: "white",
               mr: 3,
               mb: 4,
               mt: 2,
               borderRadius: "0.5rem",
-              // Potrait phones and smaller
-              "@media (max-width: 468px)": {
-                width: "90%",
-                mr: 0,
-              },
+
               // Landscape phones and potrait tablets
               "@media  (max-width: 767px)": {
                 width: "90%",
+                mr: 0,
               },
               // Potrait tablets and small desktops
               "@media (min-width:768px) and (max-width: 991px)": {
@@ -862,7 +864,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 px: 1,
@@ -873,6 +875,7 @@ const Home = () => {
               recusandae inventore odit, nobis mollitia itaque, temporibus esse
               veritatis rerum aliquid culpa earum ut? Earum, debitis?
             </Typography>
+
             <div className="ava">
               <Avatar src={ProjectJp2} />
               <Button size="small">Source Codes</Button>
@@ -884,7 +887,6 @@ const Home = () => {
               // border: "4px solid red",
               position: "relative",
               minHeight: "27rem",
-              width: "20%",
               backgroundColor: "white",
               mr: 3,
               mb: 4,
@@ -900,6 +902,7 @@ const Home = () => {
               "@media  (max-width: 767px)": {
                 width: "90%",
                 mr: 0,
+                mt: 1,
               },
               // Potrait tablets and small desktops
               "@media (min-width:768px) and (max-width: 991px)": {
@@ -925,7 +928,7 @@ const Home = () => {
                 width: "100%",
                 mb: 2,
                 "@media screen and (max-width:460px)": {
-                  width: 250,
+                  width: "100%",
                   height: 300,
                 },
 
@@ -952,7 +955,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 px: 1,
@@ -1017,7 +1020,7 @@ const Home = () => {
                 borderTopLeftRadius: "0.5rem",
                 borderTopRightRadius: "0.5rem",
                 "@media screen and (max-width:460px)": {
-                  width: 250,
+                  width: "100%",
                   height: 300,
                 },
 
@@ -1044,7 +1047,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "1rem",
+                fontSize: "0.9rem",
                 fontFamily: "Roboto, sans-serif",
                 textAlign: "justify",
                 px: 1,
@@ -1062,7 +1065,7 @@ const Home = () => {
           </Stack>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

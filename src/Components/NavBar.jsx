@@ -24,182 +24,192 @@ const NavBar = () => {
   };
 
   return (
-    <>
-      <Box
-        sx={{
-          backgroundColor: "#FFFAEB",
-          minHeight: "90px",
-          display: "flex",
-          alignItems: "center",
-          py: 1,
-          px: 2,
-          "@media screen and (max-width: 895px)": {
-            backgroundColor: "white",
-            boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
-          },
-        }}
-        className="navBox"
-      >
-        {/* Nav Avatar and button */}
-        <Grid container spacing={2}>
-          <Grid
-            item
-            xs={8}
-            sm={8}
-            md={6}
-            lg={6}
+    <Box
+      sx={{
+        backgroundColor: "#FFFAEB",
+        minHeight: "90px",
+        display: "flex",
+        alignItems: "center",
+        width: "99.9%",
+        py: 1,
+        // border: "2px solid black",
+        position: "relative",
+        "@media screen and (max-width: 895px)": {
+          backgroundColor: "white",
+          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+          width: "99.8%",
+          // border: "2px solid black",
+        },
+      }}
+      className="navBox"
+    >
+      {/* Nav Avatar and button */}
+      <Grid container spacing={2} sx={{ position: "relative" }}>
+        <Grid
+          item
+          xs={8}
+          sm={8}
+          md={5}
+          lg={5}
+          sx={{
+            alignItems: "center",
+            justifyContent: "flex-start",
+            display: "flex",
+            // border: "2px solid black",
+          }}
+        >
+          <Avatar
+            src={ProjectJp2}
             sx={{
-              alignItems: "center",
-              justifyContent: "flex-start",
-              display: "flex",
+              ml: 5,
+              mb: 1.5,
+              width: 60,
+              height: 60,
+              border: "none",
             }}
-          >
-            <Avatar
-              src={ProjectJp2}
-              sx={{
-                ml: 5,
-                mb: 1,
-                width: 60,
-                height: 60,
-                border: "none",
-              }}
-              alt="Chigbo James"
-            />
-          </Grid>
-
-          <Grid
-            item
-            className="navBtn"
-            alignItems={"center"}
-            justifyContent={"flex-end"}
-            onClick={() => {
-              asideRef.current.classList.add("showSideBar");
-            }}
-            xs={4}
-            sm={4}
-            md={6}
-            lg={6}
-            display={{ xs: "grid", sm: "grid", md: "none", lg: "none" }}
-          >
-            <ViewWeekSharpIcon
-              sx={{
-                transform: "rotate(90deg)",
-                fontSize: "2.5rem",
-                transition: "all 0.25s linear",
-                background: "transparent",
-                borderColor: "transparent",
-                color: "#E9B949",
-              }}
-            />
-          </Grid>
-
-          {/* NavLinks */}
-          <Grid
-            item
-            xs={4}
-            sm={4}
-            md={6}
-            lg={6}
-            display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}
-            alignItems="center"
-            justifyContent={"space-evenly"}
-          >
-            <Typography>
-              <Link to={"/"}>Home</Link>
-            </Typography>
-
-            <Typography>
-              <Link to={"/about"}>About</Link>
-            </Typography>
-
-            <Typography>
-              <Link to={"/project"}>Projects</Link>
-            </Typography>
-
-            <Typography>
-              <Link to={"/contact"}>Contact</Link>
-            </Typography>
-          </Grid>
+            alt="Chigbo James"
+          />
         </Grid>
 
-        {/* Aside */}
-        <Box component={"div"} ref={asideRef} className="aside">
-          <div className="btn">
-            <Button
-              disableElevation={true}
-              variant="contained"
-              onClick={() => {
-                asideRef.current.classList.remove("showSideBar");
-              }}
-            >
-              Close
-            </Button>
-          </div>
+        {/* Bars Icon */}
+        <Grid
+          item
+          className="navBtn"
+          alignItems={"center"}
+          justifyContent={"flex-end"}
+          onClick={() => {
+            asideRef.current.classList.add("showSideBar");
+          }}
+          xs={4}
+          sm={4}
+          md={6}
+          lg={6}
+          sx={{ pr: 2 }}
+          display={{ xs: "grid", sm: "grid", md: "none", lg: "none" }}
+        >
+          <ViewWeekSharpIcon
+            sx={{
+              transform: "rotate(90deg)",
+              fontSize: "2.5rem",
+              transition: "all 0.25s linear",
+              background: "transparent",
+              borderColor: "transparent",
+              color: "#E9B949",
+            }}
+          />
+        </Grid>
 
-          <Stack
-            sx={{ minHeight: "250px", my: 2, textAlign: "center" }}
-            direction={"column"}
-            alignItems={"center"}
-            justifyContent={"space-evenly"}
+        {/* NavLinks */}
+        <Grid
+          item
+          xs={4}
+          sm={4}
+          md={7}
+          lg={7}
+          display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}
+          alignItems="center"
+          justifyContent={"space-evenly"}
+          sx={
+            {
+              // border: "2px solid black",
+            }
+          }
+        >
+          <Typography>
+            <Link to={"/officialwebsite"}>Home</Link>
+          </Typography>
+
+          <Typography>
+            <Link to={"/about"}>About</Link>
+          </Typography>
+
+          <Typography>
+            <Link to={"/project"}>Projects</Link>
+          </Typography>
+
+          <Typography>
+            <Link to={"/contact"}>Contact</Link>
+          </Typography>
+        </Grid>
+      </Grid>
+
+      {/* Aside */}
+      <Box component={"div"} ref={asideRef} className="aside">
+        <div className="btn">
+          <Button
+            disableElevation={true}
+            variant="contained"
+            onClick={() => {
+              asideRef.current.classList.remove("showSideBar");
+            }}
           >
-            <Typography variant="button" onClick={handleClick}>
-              <Link to={"/"}>Home</Link>
-            </Typography>
+            Close
+          </Button>
+        </div>
 
-            <Typography variant="overline" onClick={handleClick}>
-              <Link to={"/about"}>About</Link>
-            </Typography>
+        <Stack
+          sx={{ minHeight: "250px", my: 2, textAlign: "center" }}
+          direction={"column"}
+          alignItems={"center"}
+          justifyContent={"space-evenly"}
+        >
+          <Typography variant="button" onClick={handleClick}>
+            <Link to={"/officialwebsite"}>Home</Link>
+          </Typography>
 
-            <Typography variant="button" onClick={handleClick}>
-              <Link to={"/project"}>Projects</Link>
-            </Typography>
+          <Typography variant="overline" onClick={handleClick}>
+            <Link to={"/about"}>About</Link>
+          </Typography>
 
-            <Typography variant="button" onClick={handleClick}>
-              <Link to={"/contact"}>Contact</Link>
-            </Typography>
-          </Stack>
+          <Typography variant="button" onClick={handleClick}>
+            <Link to={"/project"}>Projects</Link>
+          </Typography>
 
-          <Stack
-            sx={{ mt: 7 }}
-            direction={"row"}
-            alignItems={"center"}
-            justifyContent="space-evenly"
+          <Typography variant="button" onClick={handleClick}>
+            <Link to={"/contact"}>Contact</Link>
+          </Typography>
+        </Stack>
+
+        <Stack
+          sx={{ mt: 7 }}
+          direction={"row"}
+          alignItems={"center"}
+          justifyContent="space-evenly"
+        >
+          <MiuiLink
+            href="https://www.facebook.com/james.ifeanyi.58"
+            target={"_blank"}
+            rel="noopener"
           >
-            <MiuiLink
-              href="https://www.facebook.com/james.ifeanyi.58"
-              target={"_blank"}
-              rel="noopener"
-            >
-              <FacebookIcon />
-            </MiuiLink>
+            <FacebookIcon />
+          </MiuiLink>
 
-            <MiuiLink
-              href="https://www.instagram.com/jhamesalehandro"
-              target={"_blank"}
-              rel="noopener"
-            >
-              <InstagramIcon />
-            </MiuiLink>
+          <MiuiLink
+            href="https://www.instagram.com/jhamesalehandro"
+            target={"_blank"}
+            rel="noopener"
+          >
+            <InstagramIcon />
+          </MiuiLink>
 
-            <MiuiLink
-              href="https://www.twitter.com/Chigbo_James"
-              target={"_blank"}
-              rel="noopener"
-            >
-              <TwitterIcon />
-            </MiuiLink>
+          <MiuiLink
+            href="https://www.twitter.com/Chigbo_James"
+            target={"_blank"}
+            rel="noopener"
+          >
+            <TwitterIcon />
+          </MiuiLink>
 
-            <MiuiLink
-              href="https://www.linkedin.com/in/alejandro-james-571418225/"
-              target={"_blank"}
-              rel="noopener"
-            >
-              <LinkedInIcon />
-            </MiuiLink>
-          </Stack>
-        </Box>
+          <MiuiLink
+            href="https://www.linkedin.com/in/alejandro-james-571418225/"
+            target={"_blank"}
+            rel="noopener"
+          >
+            <LinkedInIcon />
+          </MiuiLink>
+        </Stack>
       </Box>
-    </>
+    </Box>
   );
 };
 
