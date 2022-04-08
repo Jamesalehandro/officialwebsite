@@ -115,7 +115,7 @@ const Home = () => {
                 },
               }}
             >
-              Front End Developer with React
+              Front End Developer with HTML,CSS, Javascript and React
             </Typography>
             <div className="sectionOneBtn">
               <button className="introBtn">
