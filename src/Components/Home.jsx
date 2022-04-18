@@ -127,16 +127,17 @@ const Home = () => {
           <Stack
             direction={"row"}
             alignItems={"center"}
+            // border={"1px solid black"}
             mt={5}
             mb={2}
-            mr={11}
+            mr={19}
             sx={{
               "@media screen and (max-width:768px)": {
                 mr: 11,
               },
 
               "@media screen and (min-width:895px)": {
-                mr: 19,
+                mr: 30,
               },
             }}
             justifyContent={"flex-start"}
@@ -261,6 +262,10 @@ const Home = () => {
                 "@media screen and (max-width:460px)": {
                   width: 250,
                   height: 300,
+                  display: "none",
+                },
+                "@media screen and (max-width:898px)": {
+                  display: "none",
                 },
 
                 "@media screen and (min-width:768px)": {
@@ -670,6 +675,7 @@ const Home = () => {
           pt: 3,
         }}
         direction={"column"}
+        alignItems="center"
       >
         <Typography
           variant="h3"
@@ -716,7 +722,11 @@ const Home = () => {
           Front End
         </Divider>
 
-        <Grid item sx={{ mb: 8, mt: 2, backgroundColor: "#FCEEC5" }}>
+        <Grid
+          item
+          sx={{ mb: 8, mt: 2, backgroundColor: "#FCEEC5", pl: 15 }}
+          width={"99%"}
+        >
           <Stack>
             <div className="skill">
               <p>HTML/CSS</p>
@@ -774,19 +784,22 @@ const Home = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "99%",
+            width: "98%",
             minHeight: "300px",
-            mx: 2,
             mb: 5,
 
+            // border: "1px solid black",
             // Landscape phones and potrait tablets
             "@media  (max-width: 767px)": {
-              width: "96%",
+              width: "97%",
               flexDirection: "column",
             },
             // Potrait tablets and small desktops
             "@media (min-width:768px) and (max-width: 991px)": {
               flexDirection: "flex",
+              width: "97%",
+              // border: "1px solid black",
+              pl: 2,
             },
             // Landscape tablets and medium desktops
             "@media(min-width:992px) and (max-width: 1199px)": {
@@ -800,32 +813,38 @@ const Home = () => {
         >
           <Stack
             sx={{
+              // border: "4px solid red",
               position: "relative",
               minHeight: "27rem",
-              width: "22%",
               backgroundColor: "white",
               mr: 3,
               mb: 4,
               mt: 2,
+              width: "20%",
               borderRadius: "0.5rem",
-
+              // Potrait phones and smaller
+              "@media (max-width: 468px)": {
+                width: "90%",
+                mr: 0,
+                my: 2,
+              },
               // Landscape phones and potrait tablets
               "@media  (max-width: 767px)": {
                 width: "90%",
                 mr: 0,
+                mt: 1,
               },
               // Potrait tablets and small desktops
               "@media (min-width:768px) and (max-width: 991px)": {
-                mr: 3,
-                width: "32%",
+                width: "30%",
               },
               // Landscape tablets and medium desktops
               "@media(min-width:992px) and (max-width: 1199px)": {
-                width: "32%",
+                width: "30%",
               },
 
               "@media(min-width:1200px) )": {
-                width: "32%",
+                width: "30%",
               },
             }}
           >
@@ -835,9 +854,13 @@ const Home = () => {
               sx={{
                 borderTopLeftRadius: "0.5rem",
                 borderTopRightRadius: "0.5rem",
-                width: "100%",
                 height: 230,
+                width: "100%",
                 mb: 2,
+                "@media screen and (max-width:460px)": {
+                  width: "100%",
+                  height: 300,
+                },
 
                 "@media screen and (min-width:768px)": {
                   width: "100%",
@@ -873,7 +896,6 @@ const Home = () => {
               recusandae inventore odit, nobis mollitia itaque, temporibus esse
               veritatis rerum aliquid culpa earum ut? Earum, debitis?
             </Typography>
-
             <div className="ava">
               <Avatar src={ProjectJp2} />
               <Button size="small">Source Codes</Button>

@@ -24,9 +24,12 @@ const Footer = () => {
       <Stack
         direction={"row"}
         alignItems={"center"}
+        justifyContent={"center"}
         mt={5}
         mb={2}
-        mr={11}
+        // mr={11}
+        width={"97%"}
+        // border={"1px solid black"}
         sx={{
           //   border: "2px solid green",
           "@media screen and (max-width:768px)": {
@@ -34,10 +37,9 @@ const Footer = () => {
           },
 
           "@media screen and (min-width:895px)": {
-            mr: 19,
+            // mr: 19,
           },
         }}
-        justifyContent={"flex-start"}
       >
         <MiuiLink
           sx={{ pr: 3 }}
@@ -79,11 +81,12 @@ const Footer = () => {
       <Typography
         variant="body1"
         sx={{
-          //   border: "2px solid black",
+          // border: "2px solid black",
           fontWeight: "600",
           textTransform: "capitalize",
           fontFamily: "Roboto, sans-serif",
           fontSize: "1.1rem",
+          textAlign: "center",
         }}
       >
         &copy;2022 <span> Chigbo Ifeanyi James</span>. All rights reserved.
