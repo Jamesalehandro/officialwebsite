@@ -49,7 +49,7 @@ const About = () => {
             color: "gray",
           }}
         >
-          Hello, I am Chigbo Ifeanyi and I am a frond end web developer. I live
+          Hello, I am Chigbo Ifeanyi and I am a front end web developer. I live
           and work in Enugu State, NIgeria. I spend most of my day,
           experimenting with HTML, CSS and JavaScript and react. I enjoy coding
           because it helps to keep me focused and the challenge of learning
