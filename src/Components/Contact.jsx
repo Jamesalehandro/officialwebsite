@@ -1,6 +1,7 @@
 import { Box, Container, TextField, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const Contact = () => {
   // Initial values
@@ -20,11 +21,24 @@ const Contact = () => {
     e.preventDefault();
 
     if (details.email && details.message) {
-      alert("Submitted SuccessFully. Thank You for contacting me");
-
+      swal({
+        title: "Done!",
+        text: "Thank You for contacting me. ",
+        icon: "success",
+        timer: 2000,
+        button: false,
+      });
       setTimeout(() => {
         navigate("/officialwebsite");
-      }, 1500);
+      }, 2500);
+    } else {
+      swal({
+        title: "Failed",
+        text: "Please Fill in the Spaces. ",
+        icon: "error",
+        timer: 2000,
+        button: false,
+      });
     }
   };
 
