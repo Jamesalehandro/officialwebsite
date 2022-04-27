@@ -67,14 +67,12 @@ const Contact = () => {
       <Box
         component={"form"}
         sx={{
-          // border: "2px solid black",
           width: "90%",
           minHeight: "40vh",
           px: 2,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          // boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
         }}
       >
         <TextField
@@ -86,7 +84,7 @@ const Contact = () => {
           value={details.email}
           onChange={handleChange}
           sx={{
-            my: 2,
+            my: 6,
             width: "100%",
           }}
         />

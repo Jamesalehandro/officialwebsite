@@ -24,6 +24,10 @@ import ProjectJp from "../images/project-1.jpeg";
 import ProjectJp2 from "../images/Snapchat-324694748.jpg";
 
 const Home = () => {
+  const handleClick = () => {
+    window.location.href = "https://jamesalehandro.github.io/memegeneratorr/";
+  };
+
   return (
     <Box
       maxWidth={"100%"}
@@ -731,8 +735,8 @@ const Home = () => {
             <div className="skill">
               <p>HTML/CSS</p>
               <div className="skillContainer">
-                <div className="skillValue value75"></div>
-                <p className="skillValueText">75%</p>
+                <div className="skillValue value50"></div>
+                <p className="skillValueText">90%</p>
               </div>
             </div>
 
@@ -740,7 +744,7 @@ const Home = () => {
               <p>JavaScript</p>
               <div className="skillContainer">
                 <div className="skillValue value50"></div>
-                <p className="skillValueText skillText50">50%</p>
+                <p className="skillValueText ">90%</p>
               </div>
             </div>
 
@@ -748,7 +752,7 @@ const Home = () => {
               <p>React</p>
               <div className="skillContainer">
                 <div className="skillValue value50"></div>
-                <p className="skillValueText skillText50">50%</p>
+                <p className="skillValueText ">90%</p>
               </div>
             </div>
           </Stack>
@@ -892,13 +896,15 @@ const Home = () => {
                 py: 1,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-              recusandae inventore odit, nobis mollitia itaque, temporibus esse
-              veritatis rerum aliquid culpa earum ut? Earum, debitis?
+              This is a simple fun app where you can create your own memes and
+              chose the color of the text as you deem fit. It is just a fun
+              project that I built and i hope you enjoy it as much as I did.
             </Typography>
             <div className="ava">
               <Avatar src={ProjectJp2} />
-              <Button size="small">Source Codes</Button>
+              <Button size="small" onClick={handleClick}>
+                Source Codes
+              </Button>
             </div>
           </Stack>
 

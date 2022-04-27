@@ -235,13 +235,11 @@ div.btn {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 90%;
   background-color: var(--clr-primary-5);
 }
 
-.value75 {
-  width: 75%;
-}
+
 
 .skillContainer {
   /* border: 2px solid red; */
@@ -255,9 +253,8 @@ div.btn {
 .skillValueText {
   position: absolute;
   top: -2.9rem;
-  left: 75%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  left: 90%;
+ 
 }
 
 .skillText50 {
