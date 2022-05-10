@@ -22,6 +22,7 @@ import James from "../images/James.jpg";
 import Video from "../videos/connect.mp4";
 import ProjectJp from "../images/project-1.jpeg";
 import ProjectJp2 from "../images/Snapchat-324694748.jpg";
+import Typical from "react-typical";
 
 const Home = () => {
   const handleClick = () => {
@@ -119,7 +120,22 @@ const Home = () => {
                 },
               }}
             >
-              Front End Developer with HTML,CSS, Javascript and React
+              Front End Developer with
+              <Typical
+                loop={Infinity}
+                wrapper={"p"}
+                className="typical"
+                steps={[
+                  " HTML",
+                  10000,
+                  "CSS",
+                  10000,
+                  "Javascript",
+                  10000,
+                  "React",
+                  10000,
+                ]}
+              />
             </Typography>
             <div className="sectionOneBtn">
               <button className="introBtn">
@@ -134,14 +150,14 @@ const Home = () => {
             // border={"1px solid black"}
             mt={5}
             mb={2}
-            mr={19}
+            mr={20}
             sx={{
               "@media screen and (max-width:768px)": {
                 mr: 11,
               },
 
               "@media screen and (min-width:895px)": {
-                mr: 30,
+                mr: 20,
               },
             }}
             justifyContent={"flex-start"}
