@@ -120,7 +120,7 @@ const Home = () => {
                 },
               }}
             >
-              Front End Developer with
+              Front End Developer with{" "}
               <Typical
                 loop={Infinity}
                 wrapper={"p"}
