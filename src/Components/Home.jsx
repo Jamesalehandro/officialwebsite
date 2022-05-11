@@ -127,13 +127,13 @@ const Home = () => {
                 className="typical"
                 steps={[
                   " HTML",
-                  10000,
+                  5000,
                   "CSS",
-                  10000,
+                  5000,
                   "Javascript",
-                  10000,
+                  5000,
                   "React",
-                  10000,
+                  6000,
                 ]}
               />
             </Typography>
